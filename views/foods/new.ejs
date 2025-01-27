@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Food Page</title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Add Food to Pantry</h1>
+  <form action="/users/<%= user._id %>/foods" method="POST">
+    <label for="name">Food Name: </label>
+    <input type="text" name="name" id="name">
+
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>
